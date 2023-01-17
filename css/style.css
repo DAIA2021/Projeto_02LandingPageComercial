@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,body{
+    height:100%;
+}
+
+ /*divs gerais */
+.container{
+    width:100% ;
+    max-width: 1280px;
+    margin: 0 auto;     /*deixa conteudo centralizado* 0 cima e baixo auto laterais*/
+}
+
+.clear{
+    clear: both;
+}
+
+ /********/
+
+header {
+    background-color:rgb(220, 220, 220);
+    padding:10px 2% 60px 2% ; /* 2% dá espaço na lateral antes do final na pra não ficar grudado no final*/
+    
+}
+
+.logo-1{
+    float:left ;       /*quando utilizar float colocar largura e altura*/
+     width:150px ;
+     height:50px ;
+     background-image:url(../imagens/logo1.png) ;
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     background-position: center;
+}
+
+.logo-2{
+    float:right ;
+    width:160px ;
+    height:50px ;
+    background-image: url(../imagens/logo2.png);
+    background-repeat: no-repeat; 
+    background-size:100% auto;
+    background-position:center ;
+}
+
+ section.cover-form{
+    
+    width:100% ;
+ }
+
+.container.bg { /*pai*/
+    position: relative;
+    height:550px ;
+    background-position:center ;
+    background-size: cover;  /*cobre toda a area*/
+    background-image: url(../imagens/bg-form.jpg);
+   
+
+}
+
+.form-container{ /*filho*/
+    position: absolute;
+    right:30px ;
+    top: 0;
+    width:400px ;
+    height:105% ;
+    box-shadow:1px 1px 2px 1px rgb(180, 180, 180) ;
+    background-color:white ;
+}
+
+.form-container h2{
+    font-weight: normal;
+    padding:25px 15px; ;
+    color: black;
+    font-size:16px ;
+    background-color:rgb(210,210,210) ;/*quanto mais alto valor do número mais claro*/
+}
+.form-container form{
+    margin-top:20px ;
+    padding: 15px;
+    
+}
+
+.form-container form p{
+    font-size: 14px;
+    color: #525252;
+    padding-bottom:10px ;
+}
+
+.form-container form input[type=text]{
+    width:100% ;
+    border: 1px solid #ccc;
+    height:45px ;
+    line-height:45px ;
+    padding-left:10px ;
+}
+
+.form-wraper:not(:first-child) { /*estudar esta funcionalidade*/
+    margin-top:40px ;
+}
+
+.form-wraper:last-child{
+    margin-top:20px ;
+}
+
+.form-container form input[type=submit]{
+    background-color: rgb(3, 59, 79);
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    height:45px ;
+    cursor: pointer;
+    border:0 ;
+}
+ 
+ 
+section.chamada{
+  
+    width:100% ;  
+    text-align: center;
+}
+
+section.chamada .container {
+    padding:80px 0 30px 0;
+    background-color:#29526d;
+}
+
+
+section.chamada h2{
+    width:98%;
+    max-width:700px;
+    display: inline-block;
+    color:white;
+    font-size:24px ;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+section.chamada p{
+    width:98%;
+    max-width:700px;
+    display: inline-block;
+    color:white;
+    font-size:18px ;
+    font-weight: normal;
+
+}
+
+.flex-mosaico{
+    display: flex;
+    
+}
+   
+
+.item-1-mosaico{
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+
+}
+
+.item-2-mosaico {
+    padding: 60px 40px;
+    width: 40%;
+    background-color: #215170;
+}
+
+.item-2-mosaico {
+    color: white;
+}
+
+footer {
+    background-color:rgb(220, 220, 220);
+   padding: 30px 0;
+    text-align: center;
+}
+
+footer .p {
+    margin-top: 8px;
+}
+
+footer img {
+    width: 120px;
+}
+
+
+@media screen and (max-width:960px) {
+    .bg {
+        height:auto ;
+        padding:40px 0 ;
+        text-align: center;
+    }
+
+    .form-container {
+        height: auto;
+        width: 96%;
+        max-width:400px ;
+        position: static;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .flex-mosaico {
+        display: block;
+    }
+
+    .item-1-mosaico {
+       padding-top:80% ;
+        width: 100%;
+    }
+
+    .item-2-mosaico {
+        text-align: justify;
+        width: 100%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 510px) {
+   
+   header{
+       text-align: center;
+   }
+   
+    .logo-1,.logo-2{
+        margin-top: 10px;
+        float: none;
+        display: inline-block;   
+        /*porem ambas ficam na mesma linha tem criar divs
+         cegas logo 1 e 2*/
+    }
+
+  
+}
+
